@@ -1,0 +1,503 @@
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --main-color: rgb(242, 85, 0);
+  --main-color-alt: rgb(255, 121, 49);
+  --main-transition: 0.3s;
+  --main-padding-top: 100px;
+  --main-padding-bottom: 100px;
+  --section-background: #ececec;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Cairo", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+.main-color {
+  color: var(--main-color);
+}
+
+/*end global rules**/
+
+.header {
+  background-color: #f1f1f1;
+  text-align: center;
+  height: 93vh;
+  position: relative;
+  background: url("./img/img1.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+.header #background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  z-index: 1;
+}
+
+#navbar {
+  overflow: hidden;
+  background-color: #333;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1034;
+}
+#navbar h2 .first-span {
+  border: 1px solid #fff;
+  padding: 4px;
+  background-color: #dddddd6e;
+}
+#navbar h2 .second-span {
+  color: var(--main-color);
+}
+#navbar ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 5px auto;
+}
+#navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 15px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+
+#navbar .links a:hover,
+#navbar .links a:focus {
+  background-color: var(--main-color);
+  color: white;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 0 20px;
+  transition: 3s ease;
+  -webkit-transition: 3s ease;
+  -moz-transition: 3s ease;
+  -ms-transition: 3s ease;
+  -o-transition: 3s ease;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.typewriter h2 {
+  margin: 10px auto;
+  color: var(--main-color);
+  font-size: 26px;
+}
+.typewriter h2 span {
+  color: yellow;
+}
+.typewriter h3 {
+  color: var(--main-color);
+  font-size: 20px;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+
+  animation: typing 3.5s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+/*************************about style***************/
+.about {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.about .container {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+}
+.about .about-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 50%;
+  padding-bottom: 50px;
+  flex-direction: column;
+}
+.about .about-section h1 {
+  font-size: 30px;
+}
+.about .about-section p {
+  line-height: 1.8;
+  width: 90%;
+}
+.about .image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about .image img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/*************************skills style***************/
+.our-skills {
+  background-color: var(--section-background);
+}
+.our-skills .skill {
+  margin: 20px 0;
+}
+.our-skills .skill .the-progress {
+  height: 30px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  padding: 18px 25px;
+  align-items: center;
+}
+.our-skills .skills {
+  flex: 1;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.our-skills .skill .the-progress span {
+  position: absolute;
+  left: 22%;
+  top: 50%;
+  height: 70%;
+  background-color: var(--main-color);
+  transition: width 5s linear;
+  transform: translateY(-50%);
+  -webkit-transition: width 5s linear;
+  -moz-transition: width 5s linear;
+  -ms-transition: width 5s linear;
+  -o-transition: width 5s linear;
+}
+.skills-section .button {
+  display: inline-block;
+  padding: 4px 14px;
+  border: 2px solid green;
+  color: green;
+  margin-top: 10px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+.skills-section .button:hover {
+  background-color: green;
+  color: #fff;
+}
+
+/*********************project*********************/
+.project {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.project-container .project-item {
+  position: relative;
+}
+.project-container .project-item:hover .img-text {
+  opacity: 1;
+  cursor: pointer;
+}
+.project-container .project-item .img-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(242, 85, 0, 0.79);
+  transition: 2s ease;
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -ms-transition: 2s ease;
+  -o-transition: 2s ease;
+  opacity: 0;
+}
+.project-container .project-item img {
+  object-fit: cover;
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 100%;
+}
+.heading {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.heading h1 {
+  color: var(--main-color);
+  padding: 5px 0;
+  font-size: 30px;
+}
+.heading::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 70px;
+  height: 4px;
+  background-color: var(--main-color);
+}
+
+/**************customers style*************/
+.customers {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: var(--section-background);
+}
+.customers .customers-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.customers .customers-container .customers-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+.customers .customers-container .customers-item img {
+  width: 100px;
+  margin-bottom: 10px;
+}
+.customers .customers-container .customers-item h3 {
+  color: purple;
+  margin-bottom: 10px;
+}
+
+/***********************contact ***************/
+.contact {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background: url("./img/map3.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+.contact .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.contact form {
+  width: 100%;
+}
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+}
+.contact .row input {
+  background-color: var(--section-background);
+  padding: 8px 10px;
+  margin: 10px 0;
+  border: none;
+}
+
+.contact .row .submit {
+  background: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+}
+.contact .row input:nth-child(1) {
+  margin-top: 0;
+}
+.contact .row .col-first {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+.contact .row .col-second {
+  width: 40%;
+  padding: 0 10px;
+}
+.contact .row .col-second textarea {
+  width: 100%;
+  background-color: var(--section-background);
+  padding: 8px 10px;
+  border: none;
+}
+
+/*****************footer*************/
+footer {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  background-color: #404040;
+}
+footer .copy {
+  width: 100%;
+  text-align: center;
+}
+footer .copy p {
+  color: #fff;
+  font-size: 14px;
+}
+footer .icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+footer .icon ul {
+  display: flex;
+}
+footer .icon ul li {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border: 1px solid #000;
+  color: #000;
+  margin: 0 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+footer .icon ul li:hover {
+  background-color: #fff;
+  color: var(--main-color);
+}
+
+/********go up button style*********/
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  transition: var(--main-transition);
+  -webkit-transition: var(--main-transition);
+  -moz-transition: var(--main-transition);
+  -ms-transition: var(--main-transition);
+  -o-transition: var(--main-transition);
+}
+#myBtn a {
+  color: #fff;
+}
+
+#myBtn:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
